@@ -5,7 +5,7 @@
 </h1>
 
 <p align="center">
-  <img src="DEVCLUB.jpeg" width="100%" alt="Preview DevClub 3 monitores"/>
+  <img src="https://github.com/alexsandrofelix2607-svg/DevClub/blob/main/img/DEVCLUB.PNG?raw=true" width="100%" alt="Preview DevClub 3 monitores"/>
 </p>
 
 <p align="center">
@@ -20,7 +20,6 @@
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/Responsive-Design-blue?style=for-the-badge">
   <img src="https://img.shields.io/badge/Futurista-8A2BE2?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Scroll-Sections-green?style=for-the-badge">
 </p>
 
 ---
