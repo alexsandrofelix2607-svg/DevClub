@@ -106,10 +106,10 @@ DevClub/
 
 **Alexsandro Felix**
 
-- GitHub: [@alexsandofelix2607-svg](https://github.com/alexsandofelix2607-svg)
+- GitHub: [@alexsandrofelix2607-svg](https://github.com/alexsandrofelix2607-svg/DevClub)
 
 ## ⚡ Como executar
 
 1. **Clone o repositório**
 ```bash
-git clone https://github.com/alexsandofelix2607-svg/DevClub
+git clone https://github.com/alexsandrofelix2607-svg/DevClub
