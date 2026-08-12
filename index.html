@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
+<!-- ===== CONFIGURAÇÕES GERAIS DA PÁGINA ===== -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- GSAP: Biblioteca pra animação do vídeo no scroll -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
-
+  <!-- ===== CABEÇALHO PRINCIPAL ===== -->
   <header class="navbar">
+    <!-- ===== LOGO DO SITE: Imagem da logo no canto esquerdo ===== -->
     <img src="img/Logo-devclub.PNG" class="logo" alt="Logo DevClub">
+    <!-- ===== MENU PRINCIPAL: Links de navegação entre as abas  ===== -->
     <nav>
+      <!-- LINK HOME: data-tab controla qual aba abre -->
       <a href="#" data-tab="home" class="nav-item active">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -25,6 +30,7 @@
         Home
       </a>
 
+      <!-- LINK AULAS -->
       <a href="#" data-tab="aulas" class="nav-item">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -33,6 +39,7 @@
         Aulas
       </a>
 
+      <!-- LINK AGENDA -->
       <a href="#" data-tab="agenda" class="nav-item">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -41,6 +48,7 @@
         Agenda
       </a>
 
+      <!-- LINK COMUNIDADE -->
       <a href="#" data-tab="comunidade" class="nav-item">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,6 +57,7 @@
         Comunidade
       </a>
 
+      <!-- LINK VAGAS -->
       <a href="#" data-tab="vagas" class="nav-item">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -57,6 +66,7 @@
         Vagas
       </a>
 
+      <!-- LINK SUPORTE -->
       <a href="#" data-tab="suporte" class="nav-item">
         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -66,22 +76,97 @@
       </a>
     </nav>
 
+    <!-- AVATAR USUÁRIO: Bolinha com iniciais do usuário -->
     <div class="user">AF</div>
   </header>
+  <!-- ===== MENU INFERIOR MOBILE  ===== -->
+  <!-- ===== HEADER MOBILE TOPO SÓ LOGO + AF ===== -->
+  <div class="mobile-header">
+    <img src="img/Logo-devclub.PNG" alt="DevClub" class="logo-small">
+    <div class="user-avatar">AF</div>
+  </div>
+  <!-- ===== MENU INFERIOR MOBILE ===== --><!-- NAVEGAÇÃO MOBILE: Menu fixo embaixo só no celular -->
+  <nav class="bottom-nav">
+    <!-- 1. HOME - Casa -->
+    <a href="#" data-tab="home" class="bottom-nav-item active">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M3 12L12 3L21 12V21H15V15H9V21H3V12Z" />
+      </svg>
+      <span>Home</span>
+    </a>
 
+    <!-- 2. AULAS - Câmera de vídeo -->
+    <a href="#" data-tab="aulas" class="bottom-nav-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M23 7l-7 5 7 5V7z" />
+        <rect x="1" y="5" width="15" height="14" rx="2" />
+      </svg>
+      <span>Aulas</span>
+    </a>
+
+    <!-- 3. AGENDA - Calendário -->
+    <a href="#" data-tab="agenda" class="bottom-nav-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <rect x="3" y="4" width="18" height="18" rx="2" />
+        <line x1="16" y1="2" x2="16" y2="6" />
+        <line x1="8" y1="2" x2="8" y2="6" />
+        <line x1="3" y1="10" x2="21" y2="10" />
+      </svg>
+      <span>Agenda</span>
+    </a>
+
+    <!-- 4. COMUNIDADE - 2 Pessoas -->
+    <a href="#" data-tab="comunidade" class="bottom-nav-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+        <circle cx="9" cy="7" r="4" />
+        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+      </svg>
+      <span>Comunidade</span>
+    </a>
+
+    <!-- 5. VAGAS - Maleta -->
+    <a href="#" data-tab="vagas" class="bottom-nav-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path
+          d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+      <span>Vagas</span>
+    </a>
+
+    <!-- 6. SUPORTE - Engrenagem -->
+    <a href="#" data-tab="suporte" class="bottom-nav-item">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path
+          d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+      </svg>
+      <span>Suporte</span>
+    </a>
+  </nav> <!-- ===== FIM MENU INFERIOR MOBILE ===== -->
+
+  <!-- ===== SEÇÃO HERO ===== -->
+  <!-- PRIMEIRA TELA: Vídeo de fundo que ocupa a tela inteira -->
   <section class="hero" id="hero">
     <video id="bg-video" src="videos/videos1-home.mp4" autoplay muted loop playsinline></video>
     <div class="overlay"></div>
-    <div class="hero-scroll-tip">Role para explorar</div>
+    <div class="hero-scroll-tip">Role para explorar</div> <!-- DICA SCROLL: Texto pra usuário rolar a página -->
   </section>
 
+  <!-- ===== CONTEÚDO PRINCIPAL ===== -->
   <main class="container">
 
-    <!-- HOME -->
+    <!-- ===== SEÇÃO HOME ===== -->
     <section id="home" class="tab-content active">
       <div style="margin-bottom: 2rem;">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 0px;">
-          <div class="icon-box-green">
+          <div class="icon-box-green"> <!-- ÍCONE TÍTULO: Quadrado verde com ícone -->
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
               stroke-linecap="round" stroke-linejoin="round">
               <polyline points="16 18 22 12 16 6"></polyline>
@@ -89,6 +174,7 @@
             </svg>
           </div>
 
+          <!-- TÍTULO SEÇÃO: Título principal da home -->
           <h2 class="section-title"
             style="margin: 0; font-size: 2rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: white; line-height: 1;">
             Método
@@ -104,22 +190,25 @@
           </h2>
         </div>
 
+        <!-- SUBTÍTULO SEÇÃO -->
         <p style="color: #d1d5db; font-size: 1rem; margin: -8px 0 0 0; font-weight: 400; padding-left: 56px;">
           Recursos de aprendizado e desenvolvimento
         </p>
       </div>
 
+      <!-- ===== CARDS DE RECURSOS ===== --><!-- GRID 6 CARDS: Cards principais da home -->
       <div class="grid-6">
-        <div class="card">
-          <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div class="card"> <!-- CARD AULAS -->
+          <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <!-- ÍCONE CARD -->
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
           </svg>
           <h3>Aulas</h3>
-          <p>Acesse todo o conteúdo das aulas e cursos disponíveis na plataforma</p>
-          <a href="#aulas" data-tab="aulas">Acessar →</a>
+          <p>Acesse todo o conteúdo das aulas e cursos disponíveis na plataforma</p> <!-- DESCRIÇÃO CARD -->
+          <a href="#aulas" data-tab="aulas">Acessar →</a> <!-- LINK CARD -->
         </div>
 
+        <!-- CARD CLUBHUB -->
         <div class="card">
           <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -127,9 +216,10 @@
           </svg>
           <h3>ClubHub</h3>
           <p>Nosso hub de Inteligência artificial para potencializar seus estudos e projetos</p>
-          <span class="badge-manutencao">🔑 Em manutenção</span>
+          <span class="badge-manutencao">🔑 Em manutenção</span> <!-- BADGE: Etiqueta de status -->
         </div>
 
+        <!-- CARD CLUB AGENTS -->
         <div class="card">
           <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -142,6 +232,7 @@
           <span class="badge-manutencao">🔑 Em manutenção</span>
         </div>
 
+        <!-- CARD PLAYGROUND -->
         <div class="card">
           <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -151,6 +242,7 @@
           <a href="#">Acessar →</a>
         </div>
 
+        <!-- CARD E-BOOKS -->
         <div class="card">
           <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -161,6 +253,7 @@
           <a href="#">Acessar →</a>
         </div>
 
+        <!-- CARD DESTAQUE: Card laranja de destaque -->
         <div class="card card-destaque">
           <svg class="icon-card" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -179,7 +272,7 @@
       </div>
     </section>
 
-    <!-- AULAS -->
+    <!-- ===== SEÇÃO AULAS ===== --><!-- ABA AULAS: Lista de aulas por fase -->
     <section id="aulas" class="tab-content">
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 0px;">
         <div class="icon-box-green">
@@ -196,9 +289,7 @@
       </div>
 
       <p style="color: #d1d5db; font-size: 1rem; margin: -8px 0 0 0; font-weight: 400; padding-left: 56px;">
-        Todo seu conteúdo de aprendizado
-      </p>
-
+        Todo seu conteúdo de aprendizado </p> <!-- DESCRIÇÃO SEÇÃO -->
       <h3 class="titulo-fase">FASE 01 - O Chamado da Força</h3>
       <div class="aulas-fase">
         <div class="card-curso-icon">
@@ -207,10 +298,10 @@
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
           <div class="card-texto">
-            <span>O INÍCIO DO CHAMADO</span>
-            <h3>COMECE<br>POR AQUI</h3>
+            <span>O INÍCIO DO CHAMADO</span> <!-- SUBTÍTULO AULA -->
+            <h3>COMECE<br>POR AQUI</h3> <!-- TÍTULO AULA -->
           </div>
-          <span class="logo-devclub">DevClub</span>
+          <span class="logo-devclub">DevClub</span> <!-- MARCA D'ÁGUA -->
         </div>
 
         <div class="card-curso-icon">
@@ -270,10 +361,10 @@
               d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
           </svg>
           <div class="card-texto">
-            <span>O PADAWAN APRENDE A<br>MOLDAR ESTRUTURAS</span>
-            <h3>HTML</h3>
+            <span>O PADAWAN APRENDE A<br>MOLDAR ESTRUTURAS</span> <!-- SUBTÍTULO -->
+            <h3>HTML</h3> <!-- TÍTULO -->
           </div>
-          <span class="logo-devclub">DevClub</span>
+          <span class="logo-devclub">DevClub</span> <!-- MARCA D'ÁGUA -->
         </div>
 
         <div class="card-curso-icon">
@@ -325,7 +416,7 @@
       </div>
     </section>
 
-    <!-- AGENDA -->
+    <!-- ===== SEÇÃO AGENDA ===== --><!-- ABA AGENDA: Eventos e filtros -->
     <section id="agenda" class="tab-content">
       <div style="margin-bottom: 0px;">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 0px;">
@@ -344,25 +435,30 @@
         </div>
 
         <p style="color: #d1d5db; font-size: 1rem; margin: -8px 0 0 0; font-weight: 400; padding-left: 56px;">
-          Não perca nenhum encontro da comunidade
+          Não perca nenhum encontro da comunidade <!-- DESCRIÇÃO AGENDA -->
         </p>
       </div>
 
+      <!-- ===== FILTROS DA AGENDA ===== --><!-- BOTÕES FILTRO: Filtra eventos por categoria -->
       <div class="filtros-agenda" style="margin-top: 20px; display: flex; gap: 12px; overflow-x: auto;">
         <button class="filtro ativo" type="button" data-filter="todos" aria-pressed="true">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+            </path>
           </svg>
-          Todos
+          Todos <!-- FILTRO TODOS -->
         </button>
 
         <button class="filtro verde" type="button" data-filter="geral" aria-pressed="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="10"></circle>
-            <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <path
+              d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+            </path>
           </svg>
-          Geral
+          Geral <!-- FILTRO GERAL -->
         </button>
 
         <button class="filtro azul" type="button" data-filter="devclub" aria-pressed="false">
@@ -372,14 +468,16 @@
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
           </svg>
-          DevClub
+          DevClub <!-- FILTRO DEVCLUB -->
         </button>
 
         <button class="filtro roxo" type="button" data-filter="iaclub" aria-pressed="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+            <path
+              d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+            </path>
           </svg>
-          IaClub
+          IaClub <!-- FILTRO IACLUB -->
         </button>
 
         <button class="filtro laranja" type="button" data-filter="mba" aria-pressed="false">
@@ -387,15 +485,16 @@
             <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
             <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
           </svg>
-          Pós/MBA em IA
+          Pós/MBA em IA <!-- FILTRO MBA -->
         </button>
 
         <button class="filtro ciano" type="button" data-filter="mentoria" aria-pressed="false">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
+            </path>
           </svg>
-          Mentoria
+          Mentoria<!-- FILTRO MENTORIA -->
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             style="margin-left: 4px;">
             <rect x="3" y="11" width="18" height="11" rx="2"></rect>
@@ -404,8 +503,9 @@
         </button>
       </div>
 
+      <!-- ===== EVENTOS ===== --><!-- LISTA EVENTOS: Cards de eventos com data -->
       <div class="cards-container">
-        <div class="grupo-evento" data-category="geral">
+        <div class="grupo-evento" data-category="geral"> <!-- GRUPO EVENTO: data-category pro filtro -->
           <div class="data-hoje">
             <div class="data-box">
               <span class="dia">24</span>
@@ -413,26 +513,29 @@
             </div>
             <div>
               <h3>Hoje</h3>
-              <p>Sexta-Feira, 24 De Julho <span class="badge-ao-vivo">Ao Vivo</span></p>
+              <p>Sexta-Feira, 24 De Julho <span class="badge-ao-vivo">Ao Vivo</span></p> <!-- BADGE AO VIVO -->
             </div>
           </div>
 
-          <div class="card-evento">
-            <div class="tags-evento">
+          <div class="card-evento"> <!-- CARD EVENTO INDIVIDUAL -->
+            <div class="tags-evento"> <!-- TAGS EVENTO -->
               <span class="tag verde">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
                 </svg>
                 Geral
               </span>
               <span class="tag amarelo">Encontro</span>
             </div>
 
-            <h4>Resenha Dev - Bora trocar uma ideia!</h4>
-            <p>Resenha Dev é o nosso encontro quinzenal para trocar ideia sobre o desenvolvimento, carreira e projetos.</p>
+            <h4>Resenha Dev - Bora trocar uma ideia!</h4> <!-- TÍTULO EVENTO -->
+            <p>Resenha Dev é o nosso encontro quinzenal para trocar ideia sobre o desenvolvimento, carreira e projetos.
+            </p> <!-- DESCRIÇÃO EVENTO -->
 
-            <div class="info-evento">
+            <div class="info-evento"> <!-- INFO EVENTO: Hora e local -->
               <span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
@@ -449,7 +552,7 @@
               </span>
             </div>
 
-            <a href="#" class="btn-acessar">
+            <a href="#" class="btn-acessar"> <!-- BOTÃO ACESSAR -->
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polygon points="23 7 16 12 23 17 23 7"></polygon>
                 <rect x="1" y="5" width="15" height="14" rx="2"></rect>
@@ -476,7 +579,9 @@
               <span class="tag verde">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
                 </svg>
                 Geral
               </span>
@@ -484,7 +589,8 @@
             </div>
 
             <h4>📢 CALL DE REPROGRAMAÇÃO com o Márcio - Terapeuta de AI</h4>
-            <p>Você sente que o medo e a insegurança estão te travando? Então essa call vai te ajudar a destravar sua mente.</p>
+            <p>Você sente que o medo e a insegurança estão te travando? Então essa call vai te ajudar a destravar sua
+              mente.</p>
 
             <div class="info-evento">
               <span>
@@ -530,7 +636,9 @@
               <span class="tag verde">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <path
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                  </path>
                 </svg>
                 Geral
               </span>
@@ -538,7 +646,8 @@
             </div>
 
             <h4>Fala Comigo!</h4>
-            <p>Encontro quinzenal ao vivo dedicado a dúvidas, troca de experiências e boas conversas com a comunidade.</p>
+            <p>Encontro quinzenal ao vivo dedicado a dúvidas, troca de experiências e boas conversas com a comunidade.
+            </p>
 
             <div class="info-evento">
               <span>
@@ -570,7 +679,7 @@
       <p class="agenda-empty" role="status" hidden>Nenhum evento disponível para este filtro.</p>
     </section>
 
-    <!-- COMUNIDADE -->
+    <!-- ===== SEÇÃO COMUNIDADE ===== --><!-- ABA COMUNIDADE: Links para comunidade -->
     <section id="comunidade" class="tab-content">
       <div class="titulo-comunidade">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
@@ -583,6 +692,7 @@
             </svg>
           </div>
 
+          <!-- TÍTULO COMUNIDADE -->
           <h2 class="section-title"
             style="margin: 0; font-size: 2rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: white;">
             Ambiente
@@ -598,12 +708,13 @@
           </h2>
         </div>
 
+        <!-- SUBTÍTULO -->
         <p class="section-subtitle" style="margin: -25px 0 0 0; padding-left: 56px;">Comunidade e interação</p>
       </div>
 
-      <div class="grid-comunidade">
-        <div class="card-comunidade">
-          <div class="icon-card-comunidade">
+      <div class="grid-comunidade"> <!-- GRID COMUNIDADE: 3 cards por linha -->
+        <div class="card-comunidade"> <!-- CARD COMUNIDADE -->
+          <div class="icon-card-comunidade"> <!-- ÍCONE COMUNIDADE -->
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                 d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -666,14 +777,15 @@
       </div>
     </section>
 
-    <!-- VAGAS -->
+    <!-- ===== SEÇÃO VAGAS ===== --><!-- ABA VAGAS: Estatísticas e busca de vagas -->
     <section id="vagas" class="tab-content">
-      <div class="vagas-hero">
-        <h1>Encontre os melhores <br><span>talentos em Tech & IA</span></h1>
+      <div class="vagas-hero"> <!-- HERO VAGAS: Título e botões -->
+        <h1>Encontre os melhores <br><span>talentos em Tech & IA</span></h1> <!-- TÍTULO VAGAS -->
         <p>Conectamos empresas inovadoras com <b>desenvolvedores e especialistas em IA</b> altamente qualificados.
+          <!-- DESCRIÇÃO VAGAS -->
           Profissionais prontos para transformar seu negócio.</p>
 
-        <div class="botoes-vagas">
+        <div class="botoes-vagas"> <!-- BOTÕES VAGAS -->
           <a href="#" class="btn-primario">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" width="20" height="20">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
@@ -681,7 +793,7 @@
               <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
               <path d="M16 3.13a4 4 0 0 1 0 7.75" />
             </svg>
-            Explorar Talentos →
+            Explorar Talentos → <!-- BOTÃO PRIMÁRIO -->
           </a>
 
           <a href="#" class="btn-secundario">
@@ -689,107 +801,108 @@
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.35-4.35" />
             </svg>
-            Ver Vagas
+            Ver Vagas <!-- BOTÃO SECUNDÁRIO -->
           </a>
         </div>
       </div>
 
-      <div class="grid-stats">
-        <div class="card-stat">
-          <div class="icon-stat azul2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-            </svg>
-          </div>
-          <h3>500+</h3>
-          <p>Profissionais</p>
+      <!-- ===== ESTATÍSTICAS ===== --><!-- GRID STATS: Cards com números -->
+      <div class="card-stat">
+        <div class="icon-stat azul2"> <!-- ÍCONE STAT -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+          </svg>
         </div>
+        <h3>500+</h3> <!-- NÚMERO STAT -->
+        <p>Profissionais</p> <!-- LABEL STAT -->
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat laranja2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M6 9H4.5a2.5 2.5 0 010-5H6" />
-              <path d="M18 9h1.5a2.5 2.5 0 000-5H18" />
-              <path d="M4 22h16" />
-              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-              <path d="M18 2H6v7a6 6 0 0012 0V2z" />
-            </svg>
-          </div>
-          <h3>50+</h3>
-          <p>MBA em IA</p>
+      <div class="card-stat">
+        <div class="icon-stat laranja2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 9H4.5a2.5 2.5 0 010-5H6" />
+            <path d="M18 9h1.5a2.5 2.5 0 000-5H18" />
+            <path d="M4 22h16" />
+            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+            <path d="M18 2H6v7a6 6 0 0012 0V2z" />
+          </svg>
         </div>
+        <h3>50+</h3>
+        <p>MBA em IA</p>
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat verde2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M6 22V4a2 2 0 012-2h8a2 2 0 012 2v18Z" />
-              <path d="M6 12H4a2 2 0 00-2 2v6a2 2 0 002 2h2" />
-              <path d="M18 9h2a2 2 0 012 2v9a2 2 0 01-2 2h-2" />
-            </svg>
-          </div>
-          <h3>100+</h3>
-          <p>Empresas</p>
+      <div class="card-stat">
+        <div class="icon-stat verde2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 22V4a2 2 0 012-2h8a2 2 0 012 2v18Z" />
+            <path d="M6 12H4a2 2 0 00-2 2v6a2 2 0 002 2h2" />
+            <path d="M18 9h2a2 2 0 012 2v9a2 2 0 01-2 2h-2" />
+          </svg>
         </div>
+        <h3>100+</h3>
+        <p>Empresas</p>
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat roxo2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.14-.09-2.93a2.94 2.94 0 00-2.91-.07z" />
-              <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" />
-            </svg>
-          </div>
-          <h3>200+</h3>
-          <p>Contratações</p>
+      <div class="card-stat">
+        <div class="icon-stat roxo2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.14-.09-2.93a2.94 2.94 0 00-2.91-.07z" />
+            <path d="M12 15l-3-3a22 22 0 012-3.95A12.88 12.88 0 0122 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 01-4 2z" />
+          </svg>
         </div>
+        <h3>200+</h3>
+        <p>Contratações</p>
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat laranja">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-            </svg>
-          </div>
-          <h3>5.0</h3>
-          <p>Avaliados</p>
+      <div class="card-stat">
+        <div class="icon-stat laranja">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polygon
+              points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
         </div>
+        <h3>5.0</h3>
+        <p>Avaliados</p>
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat verde">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-            </svg>
-          </div>
-          <h3>200+</h3>
-          <p>Contratados</p>
+      <div class="card-stat">
+        <div class="icon-stat verde">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+          </svg>
         </div>
+        <h3>200+</h3>
+        <p>Contratados</p>
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat azul">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-            </svg>
-          </div>
-          <h3>95%</h3>
-          <p>Taxa de Sucesso</p>
+      <div class="card-stat">
+        <div class="icon-stat azul">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+          </svg>
         </div>
+        <h3>95%</h3>
+        <p>Taxa de Sucesso</p>
+      </div>
 
-        <div class="card-stat">
-          <div class="icon-stat roxo">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
-            </svg>
-          </div>
-          <h3>50+</h3>
-          <p>MBA em IA</p>
+      <div class="card-stat">
+        <div class="icon-stat roxo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M2 4l3 12h14l3-12-6 7-4-7-4 7-6-7zm3 16h14" />
+          </svg>
         </div>
+        <h3>50+</h3>
+        <p>MBA em IA</p>
+      </div>
       </div>
     </section>
 
-    <!-- SUPORTE -->
+    <!-- ===== SEÇÃO SUPORTE ===== --><!-- ABA SUPORTE: Links de ajuda -->
     <section id="suporte" class="tab-content">
       <div class="suporte-header" style="display: block;">
         <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
@@ -804,11 +917,13 @@
             </svg>
           </div>
 
+          <!-- TÍTULO SUPORTE -->
           <h1 class="section-title"
             style="margin: 0; font-size: 2rem; font-weight: 800; display: flex; align-items: center; gap: 10px; color: white;">
             Suporte
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2">
-              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+              <path
+                d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
               <path d="M5 3v4" />
               <path d="M19 17v4" />
               <path d="M3 5h4" />
@@ -817,14 +932,17 @@
           </h1>
         </div>
 
-        <p class="suporte-subtitle" style="margin: -20px 0 0 0; padding-left: 56px; color: #a0a0a0; font-size: 1rem; font-weight: 400;">
+        <!-- SUBTÍTULO SUPORTE -->
+        <p class="suporte-subtitle"
+          style="margin: -20px 0 0 0; padding-left: 56px; color: #a0a0a0; font-size: 1rem; font-weight: 400;">
           Precisa de ajuda? Estamos aqui!
-        </p>
+      </div>
+      </p>
       </div>
 
-      <div class="grid-suporte">
-        <div class="card-suporte">
-          <div class="icon-suporte">
+      <div class="grid-suporte"> <!-- GRID SUPORTE: 3 cards por linha -->
+        <div class="card-suporte"> <!-- CARD SUPORTE -->
+          <div class="icon-suporte"> <!-- ÍCONE SUPORTE -->
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <rect x="3" y="8" width="18" height="4" rx="1" />
               <path d="M12 8v13" />
@@ -877,15 +995,17 @@
       </div>
     </section>
 
-    <!-- RODAPÉ SOCIAL -->
+    <!-- ===== RODAPÉ ===== --><!-- FOOTER: Redes sociais e direitos -->
     <footer>
-      <div class="social">
+      <div class="social"> <!-- REDES SOCIAIS -->
         <a href="https://youtube.com/@canaldevclub" target="_blank" rel="noopener noreferrer" class="social-card">
-          <svg class="logo-social" viewBox="0 0 24 24" fill="#FF0000">
-            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+          <!-- CARD YOUTUBE -->
+          <svg class="logo-social" viewBox="0 0 24 24" fill="#FF0000"> <!-- LOGO YT -->
+            <path
+              d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
           </svg>
           <div>
-            <b>@canaldevclub</b>
+            <b>@canaldevclub</b> <!-- NOME CANAL -->
             <span>251K Inscritos</span>
           </div>
         </a>
@@ -899,7 +1019,8 @@
                 <stop offset="100%" stop-color="#8134AF" />
               </radialGradient>
             </defs>
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
           </svg>
           <div>
             <b>@rodolfomorii</b>
@@ -908,16 +1029,17 @@
         </a>
       </div>
 
-      <p>© 2026 DevClub. Todos os direitos reservados.</p>
+      <p>© 2026 DevClub. Todos os direitos reservados.</p> <!-- COPYRIGHT -->
     </footer>
   </main>
-
+  <!-- ===== BOTÃO FLUTUANTE DO WHATSAPP ===== --><!-- BOTÃO CHAT: Fixo no canto inferior direito -->
   <a href="https://wa.me/55000000000" target="_blank" rel="noopener noreferrer" class="chat-float">
     <svg viewBox="0 0 24 24" fill="currentColor">
       <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" />
     </svg>
   </a>
 
+  <!-- JS: Seu arquivo de scripts -->
   <script src="script.js"></script>
 </body>
 
