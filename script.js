@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ===== 2. PEGAR ELEMENTOS DO SITE ===== */
   /* Seleciona todos os elementos que vamos controlar */
-  const navItems = document.querySelectorAll('.nav-item, .voltar-home'); /* Pega todos os links do menu */
+  const navItems = document.querySelectorAll('.nav-item, .bottom-nav-item, .voltar-home'); /* Pega todos os links do menu */
   const tabContents = document.querySelectorAll('.tab-content'); /* Pega todas as abas: home, aulas, agenda */
   const bgVideo = document.getElementById('bg-video'); /* Pega o vídeo de fundo */
   const hero = document.querySelector('.hero'); /* Pega a primeira seção */
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       activateTab(tab); /* Ativa aba */
 
       /* Rola suave pro início do conteúdo */
-      document.querySelector('.container')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById(tab)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
 

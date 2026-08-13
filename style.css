@@ -1494,12 +1494,6 @@ footer>p {
 }
 
 /* Regras responsivas para telas menores */
-@media (max-width: 900px) {
-  .grid-stats {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* Grade de estatísticas */
 @media (max-width: 768px) {
 
@@ -1510,7 +1504,6 @@ footer>p {
 
   /* DÁ ESPAÇO PRA NÃO COLAR NO TOPO */
   .hero {
-    padding-top: 60px;
     min-height: 85svh;
   }
 }
@@ -1519,10 +1512,6 @@ footer>p {
 @media (max-width: 600px) {
 
   /* Container geral do conteúdo */
-  .container {
-    padding: 1.25rem 1rem;
-  }
-
   /* Estilos de .section-title, .vagas-hero h1 */
   .section-title,
   .vagas-hero h1 {
@@ -1544,7 +1533,6 @@ footer>p {
 
   /* Card de aula */
   .card-curso-icon {
-    min-height: 82px;
     flex-direction: column;
     align-items: stretch;
   }
@@ -1706,9 +1694,6 @@ footer>p {
   }
 
   /* Base geral da página */
-  body {
-    padding-bottom: 70px;
-  }
 }
 
 /* ===== HEADER MOBILE TOPO SÓ LOGO + AF ===== */
@@ -1758,10 +1743,6 @@ footer>p {
   }
 
   /* ATUALIZA O ESPAÇO DO TOPO */
-  .hero {
-    padding-top: 70px !important;
-  }
-
   /* era 60px, agora 70px por causa do header */
 }
 
@@ -1821,6 +1802,7 @@ footer>p {
   }
 
   /* Menu inferior não cortar - resolve imagem 1 */
+  /* Item do menu inferior mobile */
   .bottom-nav {
     position: fixed !important;
     bottom: 0 !important;
@@ -1829,7 +1811,6 @@ footer>p {
     z-index: 9999 !important;
   }
 
-  /* Item do menu inferior mobile */
   .bottom-nav-item {
     font-size: 0.55rem !important;
   }
