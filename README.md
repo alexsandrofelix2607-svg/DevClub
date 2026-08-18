@@ -104,7 +104,7 @@ DevClub/
 
 ## 👨‍💻 **Autor**
 
-**Alexsandro Felix**
+**Alexsandro Felix**🔗 [Ver Site](https://alexsandrofelix2607-svg.github.io/DevClub/)
 
 - GitHub: [@alexsandrofelix2607-svg](https://github.com/alexsandrofelix2607-svg/DevClub)
 
