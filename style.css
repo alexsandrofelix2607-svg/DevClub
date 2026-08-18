@@ -85,13 +85,13 @@ body {
   background: transparent;
   border: none;
   box-shadow: none;
-  transition: transform 0.2s ease, filter 0.2s ease;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 /* Efeito ao passar o mouse na logo */
 .logo:hover {
-  transform: scale(1.04);
-  filter: brightness(1.12) drop-shadow(0 0 8px rgba(34, 197, 94, 0.25));
+  transform: translateY(-2px) scale(1.12) rotate(-3deg);
+  filter: brightness(1.18) drop-shadow(0 0 12px rgba(34, 197, 94, 0.55));
   cursor: pointer;
 }
 
@@ -152,13 +152,14 @@ body {
   font-size: 1rem;
   border: 2px solid rgba(255, 255, 255, 0.22);
   box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.18), 0 0 18px rgba(34, 197, 94, 0.2);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
 }
 
 /* Efeito do avatar ao passar o mouse */
 .user:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.24), 0 0 22px rgba(34, 197, 94, 0.26);
+  transform: translateY(-2px) scale(1.12);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.18), 0 0 26px rgba(34, 197, 94, 0.55);
+  filter: brightness(1.1);
   cursor: pointer;
 }
 
@@ -245,21 +246,22 @@ body {
 /* Efeito hover do card padrão */
 .card:hover {
   background: rgba(0, 0, 0, 0.35);
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.8);
   transform: translateY(-5px);
 }
 
 
 /* Ícone dos cards */
 .icon-card {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: rgba(59, 130, 246, 0.25);
-  border: 1px solid rgba(59, 130, 246, 0.4);
+  border: 1px solid rgba(59, 130, 246, 0.8);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 6.5px;
   margin-bottom: 1rem;
 }
 
@@ -313,18 +315,18 @@ body {
 .card-destaque {
   background: rgba(249, 115, 22, 0.25);
   backdrop-filter: blur(1px);
-  border: 1px solid rgba(249, 115, 22, 0.4);
-  box-shadow: 0 0 20px rgba(249, 115, 22, 0.3);
+  border: 1px solid rgba(249, 115, 22, 0.8);
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.5);
 }
 
 /* Ícone do card em destaque */
 .card-destaque .icon-card {
   width: 50px;
   height: 50px;
-  background: rgba(59, 130, 246, 0.15);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.8);
   border-radius: 12px;
-  padding: 10px;
+  padding: 6.5px;
   margin-bottom: 1rem;
   color: white;
 }
@@ -388,6 +390,31 @@ body {
   vertical-align: middle;
 }
 
+#home .icon-box-green svg,
+#home .star-icon {
+  width: 35px;
+  height: 35px;
+}
+
+#aulas .icon-box-green svg,
+#agenda .icon-box-green svg {
+  width: 35px;
+  height: 35px;
+}
+
+#comunidade .icon-box-blue-strong svg,
+#comunidade .star-icon,
+#suporte .icon-box-blue-strong svg,
+#suporte .star-icon {
+  width: 35px;
+  height: 35px;
+}
+
+#suporte .section-title > svg {
+  width: 35px;
+  height: 35px;
+}
+
 /* Descrição do método */
 .metodo-header p {
   color: #aaa;
@@ -433,7 +460,7 @@ body {
 /* Hover do card de aula */
 .card-curso-icon:hover {
   background: rgba(20, 20, 30, 0.6);
-  border-color: rgba(59, 130, 246, 0.4);
+  border-color: rgba(59, 130, 246, 0.8);
   transform: translateY(-2px);
 }
 
@@ -453,10 +480,10 @@ body {
 .icon-aula {
   width: 50px;
   height: 50px;
-  background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.35);
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.8);
   border-radius: 10px;
-  padding: 10px;
+  padding: 6.5px;
   color: var(--verde) !important;
   stroke: var(--verde) !important;
   flex-shrink: 0;
@@ -508,8 +535,8 @@ body {
 
 /* Ícone verde da agenda */
 .icon-box-green {
-  width: 44px;
-  height: 44px;
+  width: 50px;
+  height: 50px;
   background: rgba(34, 197, 94, 0.15);
   border: 2px solid rgba(34, 197, 94, 0.8);
   border-radius: 12px;
@@ -521,9 +548,10 @@ body {
 
 /* Ícone interno da agenda */
 .icon-box-green svg {
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
 }
+
 
 /* Título da agenda */
 .titulo-agenda .section-title {
@@ -564,7 +592,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(17, 17, 17, 0.6);
   color: #fff;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
   transition: 0.2s;
   flex-shrink: 0;
@@ -573,8 +601,8 @@ body {
 
 /* Ícone dos filtros da agenda */
 .filtro svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 /* Estilos de .filtro.ativo, .filtro:hover */
@@ -585,32 +613,32 @@ body {
 
 /* Filtro verde */
 .filtro.verde {
-  background: rgba(34, 197, 94, 0.2);
+  background: rgba(34, 197, 94, 0.25);
   color: var(--verde);
 }
 
 /* Filtro azul */
 .filtro.azul {
-  background: rgba(59, 130, 246, 0.2);
+  background: rgba(59, 130, 246, 0.25);
   color: var(--azul);
 }
 
 /* Filtro roxo */
 .filtro.roxo {
-  background: rgba(168, 85, 247, 0.2);
+  background: rgba(168, 85, 247, 0.25);
   color: var(--roxo);
 }
 
 /* Filtro laranja */
 .filtro.laranja {
-  background: rgba(249, 115, 22, 0.2);
+  background: rgba(249, 115, 22, 0.25);
   color: #f97316;
 }
 
 /* Filtro ciano */
 .filtro.ciano {
-  background: rgba(34, 211, 238, 0.2);
-  color: #06b6d4;
+  background: rgba(238, 238, 5, 0.25);
+  color: #facc15;
 }
 
 /* Ícone de bloqueio */
@@ -642,8 +670,8 @@ body {
 
 /* Caixa da data */
 .data-box {
-  background: rgba(34, 197, 94, 0.2);
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.25);
+  border: 1px solid rgba(34, 197, 94, 0.8);
   border-radius: 12px;
   padding: 8px 12px;
   text-align: center;
@@ -679,8 +707,8 @@ body {
 
 /* Descrição da data */
 .data-hoje p {
-  font-size: 14px;
-  color: #aaa;
+  font-size: 16px;
+  color: #fff;
   margin: 2px 0 0;
 }
 
@@ -693,7 +721,7 @@ body {
 /* Badge de evento ao vivo */
 .badge-ao-vivo {
   background: var(--verde);
-  color: #000;
+  color: #fff;
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 12px;
@@ -705,7 +733,7 @@ body {
 .card-evento {
   background: rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(1px);
-  border: 1px solid rgba(34, 197, 94, 0.3);
+  border: 1px solid rgba(34, 197, 94, 0.8);
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   padding: 20px !important;
@@ -734,13 +762,13 @@ body {
 
 /* Tag verde */
 .tag.verde {
-  background: rgba(74, 222, 128, 0.15);
+  background: rgba(74, 222, 128, 0.25);
   color: #4ade80;
 }
 
 /* Tag amarela */
 .tag.amarelo {
-  background: rgba(250, 204, 21, 0.15);
+  background: rgba(250, 204, 21, 0.25);
   color: #facc15;
 }
 
@@ -801,17 +829,17 @@ body {
   cursor: pointer;
   transition: all 0.3s;
   margin-top: auto;
-  box-shadow: 0 0 15px rgba(34, 197, 94, 0.2);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.8);
   text-decoration: none;
 }
 
 /* Hover do botão do evento */
 .card-evento .btn-acessar:hover {
-  background: rgba(34, 197, 94, 0.4) !important;
+  background: rgba(34, 197, 94, 0.8) !important;
   border-color: #4ade80 !important;
   color: #fff !important;
   transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.8);
 }
 
 /* Ícone do botão do evento */
@@ -824,8 +852,8 @@ body {
 
 /* Ícone azul do título */
 .icon-title-azul {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   background: var(--azul-strong);
   padding: 12px;
   border-radius: 16px;
@@ -858,8 +886,8 @@ body {
 .icon-card-comunidade {
   width: 50px;
   height: 50px;
-  background: rgba(0, 212, 255, 0.15);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(0, 212, 255, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.8);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -869,8 +897,8 @@ body {
 
 /* Ícone interno da comunidade */
 .icon-card-comunidade svg {
-  width: 22px;
-  height: 22px;
+  width: 35px;
+  height: 35px;
   stroke: #4ade80;
   stroke-width: 2;
 }
@@ -919,9 +947,9 @@ body {
 
 /* Ícone azul forte da comunidade */
 .icon-box-blue-strong {
-  width: 44px;
-  height: 44px;
-  background: rgba(0, 212, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  background: rgba(0, 212, 255, 0.25);
   border: 2px solid #00d4ff;
   border-radius: 12px;
   display: flex;
@@ -932,8 +960,8 @@ body {
 
 /* Ícone interno da comunidade */
 .icon-box-blue-strong svg {
-  width: 22px;
-  height: 22px;
+  width: 25px;
+  height: 25px;
   stroke: #fff;
 }
 
@@ -955,12 +983,6 @@ body {
   padding-left: 60px;
 }
 
-/* Estrela da comunidade */
-.star-icon-blue {
-  color: #ffd700;
-  font-size: 1.5rem;
-  margin-left: 8px;
-}
 
 /* ===== 12. SEÇÃO VAGAS ===== */
 /* Hero das vagas */
@@ -1021,24 +1043,25 @@ body {
 
 /* Botão primário */
 .btn-primario {
-  background: rgba(34, 197, 94, 0.1);
+  background: rgba(34, 197, 94, 0.25);
   border: 1px solid var(--verde);
   color: var(--verde);
   backdrop-filter: blur(1px);
-  box-shadow: 0 0 20px rgba(34, 197, 94, 0.1);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.8);
 }
 
 /* Hover do botão primário */
 .btn-primario:hover {
-  transform: translateY(-2px);
+  background: rgba(34, 197, 94, 0.8);
   border-color: #4ade80;
-  color: #4ade80;
-  box-shadow: 0 0 30px rgba(34, 197, 94, 0.4);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.8);
 }
 
 /* Botão secundário */
 .btn-secundario {
-  background: rgba(34, 197, 94, 0.1);
+  background: rgba(34, 197, 94, 0.25);
   border: 1px solid var(--verde);
   color: #fff !important;
   backdrop-filter: blur(1px);
@@ -1046,9 +1069,16 @@ body {
 
 /* Hover do botão secundário */
 .btn-secundario:hover {
+  background: rgba(34, 197, 94, 0.8);
   border-color: #4ade80;
   color: #fff !important;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(34, 197, 94, 0.8);
+}
+
+.btn-primario:hover svg,
+.btn-secundario:hover svg {
+  color: #fff;
 }
 
 /* Ícone do botão secundário */
@@ -1076,7 +1106,7 @@ body {
 
 /* Card de estatística */
 .card-stat {
-  background: rgba(20, 20, 30, 0.1) !important;
+  background: rgba(20, 20, 30, 0.5) !important;
   backdrop-filter: blur(1px) !important;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -1088,7 +1118,7 @@ body {
 /* Hover do card de estatística */
 .card-stat:hover {
   transform: translateY(-5px);
-  border-color: rgba(34, 197, 94, 0.3);
+  border-color: rgba(34, 197, 94, 0.8);
 }
 
 /* Número da estatística */
@@ -1107,20 +1137,20 @@ body {
 
 /* Ícone das estatísticas */
 .icon-stat {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   margin: 0 auto 1rem;
   border-radius: 12px;
   display: grid;
   place-items: center;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.5);
   border: 2px solid;
 }
 
 /* Ícone interno das estatísticas */
 .icon-stat svg {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
   stroke-width: 2.5;
 }
 
@@ -1210,13 +1240,13 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 2rem;
 }
 
 /* Ícone do título de suporte */
 .suporte-icon-titulo {
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: rgba(0, 212, 255, 0.25);
   border: 2px solid var(--azul-strong);
   border-radius: 12px;
@@ -1228,8 +1258,8 @@ body {
 
 /* Ícone interno do suporte */
 .suporte-icon-titulo svg {
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
   stroke: #fff;
   stroke-width: 1.5;
 }
@@ -1285,16 +1315,16 @@ body {
 /* Hover do card de suporte */
 .card-suporte:hover {
   transform: translateY(-5px);
-  border-color: rgba(59, 130, 246, 0.3);
-  background: rgba(20, 20, 30, 0.6);
+  border-color: rgba(59, 130, 246, 0.8);
+  background: rgba(20, 20, 30, 0.5);
 }
 
 /* Ícone do suporte */
 .icon-suporte {
-  width: 48px;
-  height: 48px;
-  background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  width: 50px;
+  height: 50px;
+  background: rgba(59, 130, 246, 0.25);
+  border: 1px solid rgba(59, 130, 246, 0.8);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -1305,8 +1335,8 @@ body {
 
 /* Ícone interno do suporte */
 .icon-suporte svg {
-  width: 24px;
-  height: 24px;
+  width: 35px;
+  height: 35px;
   color: var(--verde);
   stroke: var(--verde);
   stroke-width: 1.8;
@@ -1397,7 +1427,7 @@ footer {
 .social-card:hover {
   transform: translateY(-5px);
   border-color: var(--verde);
-  background: rgba(34, 197, 94, 0.1);
+  background: rgba(34, 197, 94, 0.15);
 }
 
 /* Logo da rede social */
