@@ -4,6 +4,8 @@
   🚀 DevClub - Área de Membros
 </h1>
 
+### 👉 [CLIQUE AQUI PARA ABRIR O SITE DEVCLUB](https://alexsandrofelix2607-svg.github.io/DevClub/)
+
 <p align="center">
   <img src="https://github.com/alexsandrofelix2607-svg/DevClub/blob/main/img/DEVCLUB.PNG?raw=true" width="100%" alt="Preview DevClub 3 monitores"/>
 </p>
@@ -104,9 +106,9 @@ DevClub/
 
 ## 👨‍💻 **Autor**
 
-**Alexsandro Felix**🔗 [Ver Site](https://alexsandrofelix2607-svg.github.io/DevClub/)
+**Alexsandro Felix**
 
-- GitHub: [@alexsandrofelix2607-svg](https://github.com/alexsandrofelix2607-svg/DevClub)
+GitHub: [alexsandrofelix2607-svg](https://github.com/alexsandrofelix2607-svg)
 
 ## ⚡ Como executar
 
