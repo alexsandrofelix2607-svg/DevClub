@@ -96,6 +96,7 @@ Central de ajuda e benefícios:
 > **Foco:** 100% Frontend. Projeto estático para demonstrar domínio de HTML, CSS e JS puros, sem frameworks.
 
 ## 📁 Estrutura de Pastas
+```
 DevClub/
 ├── img/
 ├── videos/
@@ -103,7 +104,7 @@ DevClub/
 ├── style.css
 ├── script.js
 └── README.md
-
+```
 ## 👨‍💻 **Autor**
 
 **Alexsandro Felix**
